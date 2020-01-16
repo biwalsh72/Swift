@@ -9,7 +9,7 @@ const history = createHashHistory();
 
 const rootReducer = createRootReducer(history);
 
-const configureStore = (initialState?: counterStateType) => {
+const configureStore = (initialState?: {}) => {
   // Redux Configuration
   const middleware = [];
   const enhancers = [];
