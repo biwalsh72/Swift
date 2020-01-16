@@ -1,6 +1,10 @@
 <hr />
 <br />
 
+# SWIFT
+
+End to End Encrypted Communication Client using Electron.
+
 ## Install
 
 And then install the dependencies with yarn.
