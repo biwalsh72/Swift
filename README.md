@@ -1,9 +1,9 @@
-<hr />
-<br />
-
 # SWIFT
 
 End to End Encrypted Communication Client using Electron.
+
+<hr />
+<br />
 
 ## Install
 
