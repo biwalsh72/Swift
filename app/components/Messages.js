@@ -13,6 +13,18 @@ export default class Home extends Component<Props> {
     return (
       <div className={styles.container} data-tid="container">
         <h4>Messages</h4>
+        <div
+          className={[styles.chatboxWrapper, styles.left].join(' ')}
+          data-tid="friends-wrapper"
+        >
+          List of Chats
+        </div>
+        <div
+          className={[styles.chatboxWrapper, styles.right].join(' ')}
+          data-tid="chat-wrapper"
+        >
+          Chatbox
+        </div>
       </div>
     );
   }
