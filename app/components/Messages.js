@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 // import routes from '../constants/routes.json';
 import styles from './Messages.scss';
+// import { Conversations } from './Conversations';
 
 type Props = {};
 
@@ -17,7 +18,7 @@ export default class Home extends Component<Props> {
           className={[styles.chatboxWrapper, styles.left].join(' ')}
           data-tid="friends-wrapper"
         >
-          List of Chats
+          Conversations
         </div>
         <div
           className={[styles.chatboxWrapper, styles.right].join(' ')}

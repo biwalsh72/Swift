@@ -47,6 +47,12 @@ const installExtensions = async () => {
   ).catch(console.log);
 };
 
+// Window size values
+const MIN_WIDTH = 650;
+const MIN_HEIGHT = 550;
+const DEFAULT_WIDTH = 1224;
+const DEFAULT_HEIGHT = 728;
+
 const createWindow = async () => {
   if (
     process.env.NODE_ENV === 'development' ||
@@ -57,8 +63,10 @@ const createWindow = async () => {
 
   mainWindow = new BrowserWindow({
     show: false,
-    width: 1224,
-    height: 728,
+    width: DEFAULT_WIDTH,
+    height: DEFAULT_HEIGHT,
+    minWidth: MIN_WIDTH,
+    minHeight: MIN_HEIGHT,
     webPreferences: {
       nodeIntegration: true
     }
