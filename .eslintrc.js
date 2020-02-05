@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'erb',
+  extends: ['erb', 'prettier'],
   settings: {
     'import/resolver': {
       webpack: {
