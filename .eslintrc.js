@@ -6,5 +6,10 @@ module.exports = {
         config: require.resolve('./configs/webpack.config.eslint.js')
       }
     }
+  },
+  'rules': {
+    'prettier/prettier': ['error', {
+      'endOfLine': 'auto'
+    }]
   }
 }

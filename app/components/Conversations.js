@@ -10,7 +10,7 @@ export default class Conversations extends Component<Props> {
   render() {
     return (
       <div className={styles.container} data-tid="main-conversations">
-        Guess
+        Conversations
       </div>
     );
   }
