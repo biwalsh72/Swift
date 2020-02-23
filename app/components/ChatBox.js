@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import styles from './ChatBox.scss';
+import FormBox from './FormBox';
 
 type Props = {};
 
@@ -15,7 +16,7 @@ export default class ChatBox extends Component<Props> {
   render() {
     return (
       <div className={styles.ChatBox} data-tid="main-chatbox">
-        ChatBox
+        <FormBox />
       </div>
     );
   }
