@@ -12,7 +12,28 @@ export default class Home extends Component<Props> {
   render() {
     return (
       <div className={styles.container} data-tid="container">
-        <h4>Messages</h4>
+        <div className={styles.leftsideBar} data-tid="left-sidebar">
+          S
+        </div>
+        <div
+          className={styles.conversationsContainer}
+          data-tid="conversations-container"
+        >
+          <h4>Conversations</h4>
+        </div>
+        <div
+          className={styles.rightPaneContainer}
+          data-tid="right-pane-container"
+        >
+          <div className={styles.header} data-tid="chatbox-header">
+            <div className={styles.receiver} data-tid="message-reciever">
+              Name of receiver
+            </div>
+          </div>
+          <div className={styles.chatBoxContainer} data-tid="chatbox-container">
+            Messages
+          </div>
+        </div>
       </div>
     );
   }
