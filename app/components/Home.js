@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 // import routes from '../constants/routes.json';
 import styles from './Home.scss';
 
+import FormBox from './FormBox';
+
 type Props = {};
 
 export default class Home extends Component<Props> {
@@ -31,7 +33,7 @@ export default class Home extends Component<Props> {
             </div>
           </div>
           <div className={styles.chatBoxContainer} data-tid="chatbox-container">
-            Messages
+            <FormBox />
           </div>
         </div>
       </div>

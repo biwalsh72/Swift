@@ -64,6 +64,7 @@ export default class Login extends Component<Props> {
                 <div>Login</div>
               </Button>
             </Link>
+            <a className={styles.signup}>Don&apos;t have an account yet?</a>
           </form>
         </div>
       </div>

@@ -149,3 +149,17 @@ input:focus {
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
 }
+
+.signup {
+  display: block;
+  bottom: 0;
+  margin-top: 0.8rem;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+  color: rgb(201, 201, 201);
+}
+
+.signup:hover {
+  color: white;
+  cursor: pointer;
+}
