@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 // @flow
 import React, { Component } from 'react';
 import styles from './FormBox.scss';
@@ -7,12 +8,27 @@ type Props = {};
 export default class FormBox extends Component<Props> {
   props: Props;
 
-  onEnterPress = e => {
-    if (e.keyCode === 13 && e.shiftKey === false) {
-      // e.preventDefault();
-      this.state.value = '';
+  constructor(props) {
+    super(props);
+    this.state = { value: '' };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.keypress = this.keypress.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  keypress(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      console.log(this.state.value);
+      this.setState({
+        value: ''
+      });
     }
-  };
+  }
 
   render() {
     return (
@@ -22,9 +38,10 @@ export default class FormBox extends Component<Props> {
         className={styles.messageInput}
         data-tid="message-input"
         placeholder="Type here..."
-        onKeyDown={this.onEnterPress}
+        value={this.state.value}
+        onChange={this.handleChange}
+        onKeyPress={this.keypress}
       />
-      // </div>
     );
   }
 }
