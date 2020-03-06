@@ -16,15 +16,15 @@ export default class FormBox extends Component<Props> {
 
   render() {
     return (
-      <div className={styles.formBoxWrapper} data-tid="form-wrapper">
-        <textarea
-          type="text"
-          className={styles.messageInput}
-          data-tid="message-input"
-          placeholder="Type here..."
-          onKeyDown={this.onEnterPress}
-        />
-      </div>
+      // <div className={styles.formBoxWrapper} data-tid="form-wrapper">
+      <textarea
+        type="text"
+        className={styles.messageInput}
+        data-tid="message-input"
+        placeholder="Type here..."
+        onKeyDown={this.onEnterPress}
+      />
+      // </div>
     );
   }
 }

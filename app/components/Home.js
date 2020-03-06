@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import styles from './Home.scss';
 
 import FormBox from './FormBox';
+import ChatBox from './ChatBox';
 
 type Props = {};
 
@@ -33,6 +34,7 @@ export default class Home extends Component<Props> {
             </div>
           </div>
           <div className={styles.chatBoxContainer} data-tid="chatbox-container">
+            <ChatBox />
             <FormBox />
           </div>
         </div>
