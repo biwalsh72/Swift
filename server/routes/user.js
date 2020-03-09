@@ -5,7 +5,7 @@ const auth = require('../models/user');
 const userController = require('../controllers/user');
 
 const register = router => {
-  router.post('/', (req, res, next) => {
+  router.post('/login', (req, res, next) => {
     passport.authenticate('local', (err, user) => {
       console.log(err);
       if (err) {
@@ -22,11 +22,9 @@ const register = router => {
           err: null,
           authUser: {
             id: user.id,
-            email: user.email,
             username: user.username,
-            fullname: user.fullname,
-            created_at: user.created_at,
-            modified_at: user.modified_at
+            password: user.password,
+            email: user.email
           }
         });
       });

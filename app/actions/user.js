@@ -22,7 +22,7 @@ const login = (username, password) => {
       body: JSON.stringify({ username, password })
     };
 
-    fetch('./home', requestOptions)
+    fetch('/login', requestOptions)
       .then(response => response.json())
       .then(authObject => {
         if (authObject.err) {

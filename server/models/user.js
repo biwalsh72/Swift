@@ -14,6 +14,7 @@ connection.connect(function(err) {
 });
 
 const _login = (username, password, done) => {
+  console.log('querying');
   connection.query(
     `SELECT * FROM \`swiftlogin\` WHERE \`username\` = '${username}'`,
     (err, rows) => {

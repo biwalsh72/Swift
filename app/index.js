@@ -4,6 +4,7 @@ import { AppContainer as ReactHotAppContainer } from 'react-hot-loader';
 import Root from './containers/Root';
 import { configureStore, history } from './store/configureStore';
 import './app.global.css';
+import registerServiceWorker from './registerServiceWorker';
 
 const store = configureStore();
 
@@ -15,3 +16,5 @@ render(
   </AppContainer>,
   document.getElementById('root')
 );
+
+registerServiceWorker();

@@ -12,7 +12,7 @@ const conf = require('./session-info');
 
 exports.configExpress = app => {
   const sessionStore = new MySQLStore(config.configDB);
-  // app.set('view engine', 'ejs');
+  app.set('view engine', 'ejs');
   // eslint-disable-next-line no-param-reassign
   app.locals.pretty = true;
 
@@ -55,10 +55,10 @@ exports.configExpress = app => {
     })
   );
 
-  if (app.get('env') === 'development') {
+  /* if (app.get('env') === 'development') {
     app.use((err, req, res, next) => {
       res.status(err.status || 500);
       res.end(err.message);
     });
-  }
+  } */
 };
