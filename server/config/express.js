@@ -46,8 +46,8 @@ exports.configExpress = app => {
 
   app.use(
     session({
-      secret: conf.secret,
-      key: conf.key,
+      secret: conf.conf.secret,
+      key: conf.conf.key,
       store: sessionStore,
       cookie: { maxAge: 1000 * 60 * 60 * 12 },
       resave: true,
