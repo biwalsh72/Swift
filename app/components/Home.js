@@ -6,6 +6,8 @@ import styles from './Home.scss';
 
 import FormBox from './FormBox';
 import ChatBox from './ChatBox';
+import Conversations from './Conversations/Conversations';
+import ConversationsHeader from './Conversations/ConversationsHeader';
 
 type Props = {};
 
@@ -22,7 +24,8 @@ export default class Home extends Component<Props> {
           className={styles.conversationsContainer}
           data-tid="conversations-container"
         >
-          <h4>Conversations</h4>
+          <ConversationsHeader />
+          <Conversations />
         </div>
         <div
           className={styles.rightPaneContainer}

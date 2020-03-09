@@ -1,0 +1,23 @@
+.conversationsList {
+  display: flex;
+  flex-direction: column;
+  background: rgb(226, 226, 226);
+  overflow-y: auto;
+  z-index: 1;
+  flex-grow: 1;
+}
+
+.conversationEntryContent {
+  height: 66px;
+  border-bottom: 1px solid darkgrey;
+  cursor: pointer;
+}
+
+.conversationEntryName {
+  margin-top: auto;
+  margin-left: 5px;
+}
+
+.defaultUser {
+  visibility: hidden;
+}
