@@ -2,17 +2,15 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 // @flow
 import React, { Component } from 'react';
-import { Button, Alert } from 'reactstrap';
-import { connect } from 'react-redux';
-import { Redirect, withRouter } from 'react-router-dom';
+import { Button } from 'reactstrap';
 import styles from './Login.scss';
 import logo from '../../resources/swift.svg';
-import routes from '../constants/routes.json';
-import { userActions } from '../actions/user';
+// import routes from '../constants/routes.json';
+// import { userActions } from '../actions/user';
 
 type Props = {};
 
-class Login extends Component<Props> {
+export default class Login extends Component<Props> {
   props: Props;
 
   constructor(props) {
@@ -36,11 +34,6 @@ class Login extends Component<Props> {
     const { username, password } = this.state;
     console.log(`${username} ${password}`);
 
-    const { dispatch } = this.props;
-    if (username && password) {
-      dispatch(userActions.login(username, password));
-    }
-
     this.setState({
       username: '',
       password: ''
@@ -48,9 +41,7 @@ class Login extends Component<Props> {
   }
 
   render() {
-    const { loggedIn, error } = this.props;
     const { username, password } = this.state;
-    const reDirect = loggedIn ? <Redirect to={routes.HOME} push /> : '';
     return (
       <div className={styles.container} data-tid="container">
         <h3 className={styles.noselect}>
@@ -103,26 +94,9 @@ class Login extends Component<Props> {
               <div>Login</div>
             </Button>
             <a className={styles.signup}>Don&apos;t have an account yet?</a>
-            {reDirect}
           </form>
-          {error && (
-            <Alert bsstyle="danger">
-              <p>{error}</p>
-            </Alert>
-          )}
         </div>
       </div>
     );
   }
 }
-
-function mapStateToProps(state) {
-  const { loggedIn, error } = state.authentication;
-  return {
-    loggedIn,
-    error
-  };
-}
-
-const connectedLoginForm = withRouter(connect(mapStateToProps)(Login));
-export { connectedLoginForm as default };

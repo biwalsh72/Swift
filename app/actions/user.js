@@ -1,5 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable promise/always-return */
+import fetch from 'electron-main-fetch';
 import { userConstants } from '../constants/user';
 
 const login = (username, password) => {
@@ -22,7 +23,7 @@ const login = (username, password) => {
       body: JSON.stringify({ username, password })
     };
 
-    fetch('/login', requestOptions)
+    fetch('/', requestOptions)
       .then(response => response.json())
       .then(authObject => {
         if (authObject.err) {
