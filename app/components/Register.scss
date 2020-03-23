@@ -19,7 +19,7 @@ h3 {
   position: relative;
   z-index: 1;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 input {
@@ -36,8 +36,9 @@ input {
   transition: 0.3s ease-in-out;
 }
 
-.loginInfoUsername {
+.loginInfoUserName {
   display: block;
+  margin-top: 1rem;
 }
 
 .loginInfoPassword {

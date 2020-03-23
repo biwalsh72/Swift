@@ -1,4 +1,5 @@
 {
   "apiIdentifier": "https://swift-users",
-  "auth0Domain": "dev-tev9nxlx.auth0.com"
+  "auth0Domain": "dev-tev9nxlx.auth0.com",
+  "clientId": "hEBV6lCnyPKK6scmgo0gYsBT2km25i7h"
 }

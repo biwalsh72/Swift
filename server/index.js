@@ -27,8 +27,4 @@ app.use(
   })
 );
 
-app.get('/private', (req, res) =>
-  res.send('Only authenticated users can read this message.')
-);
-
 app.listen(3009, () => console.log('Server listening on port 3009!'));
